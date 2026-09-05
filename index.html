@@ -392,6 +392,10 @@
     /* Discourage casual copying; this is not content security or DRM. */
     body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
     img, a { -webkit-touch-callout: none; -webkit-user-drag: none; }
+    /* Keep native touch hit-testing off image elements; clicks are routed below. */
+    img { pointer-events: none; }
+    .lightbox-frame { display: flex; position: relative; }
+    .lightbox-frame::after { content: ''; position: absolute; inset: 0; z-index: 1; background: transparent; -webkit-touch-callout: none; }
     :is(a, button, [data-lightbox], [data-gallery-open]):focus:not(:focus-visible) { outline: none; }
     :is(a, button, [data-lightbox], [data-gallery-open]):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   </style>
@@ -607,6 +611,16 @@
     document.addEventListener('contextmenu', function (event) { event.preventDefault(); });
     document.addEventListener('dragstart', function (event) { event.preventDefault(); });
     document.addEventListener('selectstart', function (event) { event.preventDefault(); });
+    // Unwrapped image cards retain their original layout and click handlers.
+    document.querySelector('main').addEventListener('click', function (event) {
+      if (!event.isTrusted || event.target.closest('a, button')) return;
+      const images = Array.from(document.querySelectorAll('main img[data-lightbox], main img[data-gallery-open]'));
+      const image = images.find(function (item) {
+        const rect = item.getBoundingClientRect();
+        return event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+      });
+      if (image) image.click();
+    });
     const readingSections = [
       ['top', '首页'], ['profile', '关于我'], ['work', '代表作品'],
       ['blue', '代表作品 · 秀场设计'], ['global', '代表作品 · 海外产品线'],
