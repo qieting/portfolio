@@ -1,26 +1,783 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>崔悦 — 内衣设计师</title>
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:"PingFang SC","Hiragino Sans GB",sans-serif;color:#4a4a4a;background:#fdfbfa}nav{position:fixed;top:0;width:100%;padding:22px 50px;display:flex;justify-content:center;align-items:center;z-index:100;background:rgba(253,251,250,.95);backdrop-filter:blur(10px)}nav .logo{position:absolute;left:50px;font-size:1em;font-weight:300;letter-spacing:.2em;color:#c4919e}nav ul{list-style:none;display:flex;gap:35px}nav ul li a{text-decoration:none;color:#b0a0a0;font-size:.85em;letter-spacing:.1em;transition:color .3s}nav ul li a:hover{color:#c4919e}.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(180deg,#fdfbfa 0%,#f8f0ee 50%,#f3e8e4 100%);text-align:center;position:relative;overflow:hidden}.hero::before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(196,145,158,.08);top:-100px;right:-100px}.hero::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(196,145,158,.06);bottom:-50px;left:-50px}.hero .deco{width:80px;height:1px;background:linear-gradient(90deg,transparent,#c4919e,transparent);margin-bottom:40px}.hero h1{font-size:3.8em;font-weight:200;color:#3a3a3a;letter-spacing:.15em;margin-bottom:20px}.hero .subtitle{font-size:1.1em;color:#c4919e;font-weight:300;letter-spacing:.2em;margin-bottom:15px}.hero .desc{font-size:.95em;color:#b0a0a0;line-height:1.8;max-width:500px;margin-top:20px}.hero-contact{margin-top:25px;font-size:.9em;color:#b0a0a0;letter-spacing:.05em}.hero-contact .hc-sep{margin:0 8px;color:#d4b8be}.hero .scroll-hint{position:absolute;bottom:40px;color:#d4b8be;font-size:.75em;letter-spacing:.15em;animation:float 2s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}section{padding:100px 50px;max-width:1200px;margin:0 auto}.section-title{text-align:center;font-size:2em;font-weight:200;letter-spacing:.15em;color:#3a3a3a;margin-bottom:10px}.section-line{width:40px;height:1px;background:#c4919e;margin:0 auto 15px}.section-desc{text-align:center;color:#b0a0a0;font-size:.9em;margin-bottom:60px}.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.work-item{position:relative;overflow:hidden;border-radius:12px;cursor:pointer}.work-item .img{width:100%;aspect-ratio:3/4;transition:transform .6s ease}.work-item:hover .img{transform:scale(1.05)}.work-item .gallery-imgs{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;touch-action:pan-y}.work-item .gallery-img{position:absolute;top:0;left:0;width:100%;height:100%;transition:transform .4s ease;transform:translateX(100%)}.work-item .gallery-img.prev{transform:translateX(-100%)}.work-item .gallery-img.active{transform:translateX(0)}.work-item .dots{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:5}.work-item .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:background .3s}.work-item .dot.active{background:#fff}.work-item .tag{position:absolute;top:15px;left:15px;background:rgba(255,255,255,.9);padding:6px 16px;border-radius:20px;font-size:.75em;color:#c4919e;letter-spacing:.1em}.work-item .bottom{position:absolute;bottom:0;left:0;right:0;padding:30px 20px 20px;background:linear-gradient(transparent,rgba(0,0,0,.35));color:#fff;border-radius:0 0 12px 12px}.work-item .bottom h3{font-size:1em;font-weight:400;letter-spacing:.1em}.work-item .bottom p{font-size:.8em;margin-top:5px;opacity:.7}.about-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(196,145,158,.1);display:flex;max-width:1100px;margin:0 auto}.about-card .photo{flex:1;min-height:500px}.about-card .content{flex:1;padding:60px;display:flex;flex-direction:column;justify-content:center}.about-card .content .label{font-size:.75em;letter-spacing:.25em;color:#c4919e;margin-bottom:20px}.about-card .content h2{font-size:2em;font-weight:200;color:#3a3a3a;letter-spacing:.1em;margin-bottom:25px;line-height:1.4}.about-card .content p{color:#888;line-height:2;font-size:.95em;margin-bottom:12px}.about-card .content .signature{margin-top:30px;font-style:italic;color:#c4919e;font-size:1.2em}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:80px}.feature{text-align:center;padding:40px 25px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(196,145,158,.08)}.feature .icon{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f8e8e4,#f0d4d0);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:1.3em}.feature h3{font-size:1em;font-weight:400;color:#3a3a3a;letter-spacing:.1em;margin-bottom:10px}.feature p{font-size:.85em;color:#aaa;line-height:1.7}.experience{max-width:900px;margin:0 auto}.exp-item{display:flex;gap:40px;margin-bottom:50px;padding-bottom:50px;border-bottom:1px solid #f0e8e4}.exp-item:last-child{border-bottom:none}.exp-time{flex-shrink:0;width:160px;font-size:.85em;color:#c4919e;letter-spacing:.05em;padding-top:5px}.exp-detail h3{font-size:1.15em;font-weight:400;color:#3a3a3a;letter-spacing:.08em;margin-bottom:8px}.exp-detail .company{font-size:.9em;color:#b0a0a0;margin-bottom:15px}.exp-detail p{color:#888;line-height:2;font-size:.9em}.patents-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1000px;margin:0 auto}.patent-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(196,145,158,.08);transition:transform .3s,box-shadow .3s}.patent-card:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(196,145,158,.15)}.patent-card .patent-img{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#f8e8e4,#f0d4d0);display:flex;align-items:center;justify-content:center;font-size:2.5em;color:#d4b8be;overflow:hidden}.patent-card .patent-pdf{width:100%;aspect-ratio:3/4;overflow:hidden;background:#f8f5f3}.patent-card .patent-pdf iframe{width:100%;height:100%;border:none}.patent-card .patent-img img{width:100%;height:100%;object-fit:cover}.patent-card .patent-info{padding:20px;text-align:center}.patent-card .patent-info h3{font-size:1em;font-weight:400;color:#3a3a3a;letter-spacing:.08em;margin-bottom:8px}.patent-card .patent-info p{font-size:.85em;color:#aaa;line-height:1.6;margin-bottom:12px}.patent-card .patent-info a{display:inline-block;padding:6px 20px;border:1px solid #f0d4d0;border-radius:20px;color:#c4919e;font-size:.8em;text-decoration:none;transition:all .3s}.patent-card .patent-info a:hover{background:#c4919e;color:#fff;border-color:#c4919e}.edu-card{background:#fff;border-radius:16px;padding:50px;box-shadow:0 10px 30px rgba(196,145,158,.08);max-width:700px;margin:0 auto;text-align:center}.edu-card .school{font-size:1.5em;font-weight:200;color:#3a3a3a;letter-spacing:.1em;margin-bottom:8px}.edu-card .major{font-size:.95em;color:#c4919e;letter-spacing:.1em;margin-bottom:15px}.edu-card .time{font-size:.85em;color:#b0a0a0;margin-bottom:25px}.edu-card .awards{color:#888;line-height:2.2;font-size:.9em;text-align:left;padding:0 20px}.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:800px;margin:0 auto}.cert-item{text-align:center;padding:30px 15px;background:#fff;border-radius:12px;box-shadow:0 8px 25px rgba(196,145,158,.08)}.cert-item .cert-icon{font-size:1.5em;margin-bottom:12px}.cert-item p{font-size:.85em;color:#666;letter-spacing:.05em;line-height:1.5}.contact-section{text-align:center;padding:100px 50px;background:linear-gradient(180deg,#fdfbfa,#f8f0ee)}.contact-section h2{font-size:2em;font-weight:200;color:#3a3a3a;letter-spacing:.12em;margin-bottom:15px}.contact-section .line{width:40px;height:1px;background:#c4919e;margin:0 auto 25px}.contact-section .contact-info{display:flex;justify-content:center;gap:60px;margin-top:30px}.contact-section .contact-item{text-align:center}.contact-section .contact-item .icon{font-size:1.5em;margin-bottom:10px}.contact-section .contact-item p{color:#888;font-size:.9em;line-height:1.8}.contact-section .contact-item a{color:#c4919e;text-decoration:none}.contact-section .btn{display:inline-block;margin-top:40px;padding:14px 40px;background:linear-gradient(135deg,#c4919e,#d4a0aa);color:#fff;text-decoration:none;border-radius:30px;font-size:.9em;letter-spacing:.15em;transition:transform .3s,box-shadow .3s}.contact-section .btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(196,145,158,.3)}footer{text-align:center;padding:30px;color:#d4b8be;font-size:.8em;letter-spacing:.1em}.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:9999;display:none;align-items:center;justify-content:center;cursor:pointer}.lightbox.active{display:flex}.lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,.5)}.lightbox .lb-close{position:absolute;top:20px;right:30px;color:#fff;font-size:2em;cursor:pointer;z-index:10000;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.15);transition:background .3s}.lightbox .lb-close:hover{background:rgba(255,255,255,.3)}.lightbox .lb-nav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2.5em;cursor:pointer;z-index:10000;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.15);transition:background .3s;user-select:none}.lightbox .lb-nav:hover{background:rgba(255,255,255,.3)}.lightbox .lb-prev{left:20px}.lightbox .lb-next{right:20px}.lightbox .lb-counter{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:.9em}.work-item .gallery-imgs{cursor:pointer}.patent-card .patent-img img{cursor:pointer}.plannings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;max-width:1000px;margin:0 auto}@media(max-width:768px){.plannings-grid{grid-template-columns:1fr}nav{padding:15px 20px}nav .logo{position:static;margin-bottom:10px}nav ul{gap:20px}.hero h1{font-size:2.5em}section{padding:60px 20px}.works-grid{grid-template-columns:repeat(2,1fr)}.about-card{flex-direction:column}.about-card .photo{min-height:300px}.about-card .content{padding:40px 25px}.features{grid-template-columns:1fr}.exp-item{flex-direction:column;gap:10px}.cert-grid{grid-template-columns:repeat(2,1fr)}.patents-grid{grid-template-columns:repeat(2,1fr)}.contact-section .contact-info{flex-direction:column;gap:20px}}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="崔悦 - 内衣设计与产品企划个人作品集">
+  <title>崔悦｜内衣设计与产品企划</title>
+  <style>
+    :root {
+      --pink: #f3e3e5;
+      --pink-deep: #dcc2c6;
+      --paper: #fffaf8;
+      --ink: #2b2426;
+      --muted: #806d71;
+      --accent: #a25462;
+      --line: rgba(62, 42, 47, .18);
+      --page: min(1480px, calc(100vw - 158px));
+      --serif: Georgia, "Songti SC", "STSong", serif;
+      --sans: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--pink); font-family: var(--sans); }
+    body.menu-open, body.lightbox-open { overflow: hidden; }
+    img { display: block; width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; font: inherit; }
+    main { padding-left: 118px; }
+    @media (min-width: 681px) {
+      main > .hero, main > .section, main > .case, main > .archive, main > .resume, main > .patents, main > .contact { margin-left: 28px; margin-right: auto; }
+    }
+    .chapter-rail { position: fixed; top: 50%; left: 8px; transform: translateY(-43%); width: 110px; max-height: calc(100svh - 112px); overflow-y: auto; scrollbar-width: none; z-index: 25; color: var(--muted); }
+    .chapter-rail::-webkit-scrollbar { display: none; }
+    .rail-children[hidden] { display: none; }
+    .rail-children { margin: 0 0 6px 20px; padding-left: 11px; border-left: 1px solid var(--pink-deep); }
+    .chapter-rail .rail-children a { height: 30px; gap: 5px; font-size: 10px; white-space: nowrap; }
+    .rail-child-number { font-family: var(--serif); font-size: 10px; opacity: .65; }
+    .chapter-rail .rail-children a[aria-current]::before { content: ''; width: 4px; height: 4px; background: var(--accent); transform: rotate(45deg); position: absolute; left: -14px; }
+    .rail-title { margin: 0 0 20px 12px; font-size: 9px; letter-spacing: .12em; white-space: nowrap; }
+    .rail-label { white-space: nowrap; }
+    .rail-links { position: relative; }
+    .rail-links::before, .rail-fill { content: ''; position: absolute; left: 15px; top: 24px; bottom: 24px; width: 1px; background: var(--pink-deep); }
+    .rail-fill { background: var(--accent); transform: scaleY(0); transform-origin: top; }
+    .chapter-rail a { position: relative; height: 48px; display: flex; gap: 4px; align-items: center; font-size: 11px; }
+    .rail-dot { position: relative; flex: 0 0 32px; height: 40px; display: grid; place-items: center; }
+    .rail-dot::before { content: ''; width: 6px; height: 6px; border: 1px solid var(--pink-deep); background: var(--pink); border-radius: 50%; transition: .2s ease; }
+    .chapter-rail a.is-read .rail-dot::before { background: var(--accent); border-color: var(--accent); }
+    .chapter-rail a[aria-current] { color: var(--accent); font-weight: 600; }
+    .chapter-rail a[aria-current] .rail-dot::before { width: 9px; height: 9px; border-color: var(--accent); background: var(--accent); transform: rotate(45deg); border-radius: 1px; outline: 1px solid var(--pink-deep); outline-offset: 5px; }
+    .chapter-rail a:hover { color: var(--accent); }
+    .chapter-rail a:focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; }
+    .rail-count { margin: 18px 0 0 12px; font-family: var(--serif); color: var(--accent); font-size: 23px; }
+    .rail-count small { font-family: var(--sans); font-size: 10px; color: var(--muted); margin-left: 4px; }
+    body.menu-open .chapter-rail, body.lightbox-open .chapter-rail { visibility: hidden; }
+    .site-header { position: sticky; top: 0; z-index: 30; height: 72px; background: rgba(243, 227, 229, .94); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
+    .header-inner { width: var(--page); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-family: var(--serif); font-size: 20px; letter-spacing: .08em; }
+    .desktop-nav { display: flex; gap: 30px; align-items: center; font-size: 14px; }
+    .desktop-nav a { padding: 12px 0; color: var(--muted); }
+    .desktop-nav a:hover { color: var(--ink); }
+    .desktop-nav a[aria-current="location"] { color: var(--accent); box-shadow: inset 0 -2px var(--accent); }
+    .menu-button { display: none; min-width: 48px; min-height: 48px; border: 0; background: transparent; }
+    .mobile-nav { display: none; position: fixed; inset: 72px 0 0; z-index: 29; padding: 28px 24px; background: var(--pink); }
+    .mobile-nav a { display: block; padding: 17px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: 28px; }
+    .mobile-nav.is-open { display: block; }
+
+    .eyebrow { color: var(--accent); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+    .hero { width: var(--page); margin: auto; padding: 16px 0; display: grid; align-items: center; grid-template-columns: .75fr 1.25fr; border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+    .hero-copy { min-width: 0; padding: 28px 40px; display: flex; flex-direction: column; justify-content: center; }
+    .identity { display: flex; align-items: center; gap: 13px; }
+    .identity img { width: 68px; height: 68px; object-fit: cover; object-position: center 18%; border-radius: 50%; background: white; }
+    .identity div { display: grid; gap: 4px; }
+    .identity strong { font-size: 20px; }
+    .identity span { color: var(--muted); font-size: 13px; }
+    .hero h1 { margin: 34px 0 20px; font-family: var(--serif); font-size: clamp(44px, 3.8vw, 58px); font-weight: 500; line-height: 1.08; letter-spacing: -.035em; }
+    .hero-copy > p { max-width: 37em; margin: 0; color: #55484b; font-size: 16px; line-height: 1.9; }
+    .hero-stats { display: flex; gap: 32px; margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); }
+    .hero-stats div { display: grid; gap: 5px; color: var(--muted); font-size: 12px; }
+    .hero-stats b { color: var(--ink); font-size: 21px; }
+    .hero-link { width: fit-content; margin-top: 32px; padding-bottom: 6px; border-bottom: 1px solid var(--ink); font-size: 14px; }
+    .hero-gallery { height: min(748px, calc(100svh - 104px)); min-height: 396px; display: grid; grid-template-columns: 1.16fr .84fr; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; padding: 8px; margin-right: 12px; background: var(--paper); }
+    .hero-gallery figure { min-height: 0; margin: 0; overflow: hidden; position: relative; }
+    .hero-gallery figure:first-child { grid-row: 1 / 3; }
+    .hero-gallery figure a { display: block; height: 100%; padding-bottom: 34px; background: #f4e9e9; }
+    .hero-gallery figure a:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+    .hero-gallery img { height: 100%; object-fit: contain; object-position: center; transition: transform .5s ease; }
+    :is(.hero-gallery a, .project-index a, .patent-grid button) img,
+    img[data-lightbox], img[data-gallery-open] { transition: transform .5s ease; transform-origin: center; }
+    .patent-grid button { overflow: hidden; }
+    @media (hover: hover) and (pointer: fine) {
+      :is(.hero-gallery a, .project-index a, .patent-grid button):hover img,
+      img[data-lightbox]:hover, img[data-gallery-open]:hover { transform: scale(1.025); }
+    }
+    :is(.hero-gallery a, .project-index a, .patent-grid button):focus-visible img,
+    img[data-lightbox]:focus-visible, img[data-gallery-open]:focus-visible { transform: scale(1.025); }
+    .hero-gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 8px; color: var(--ink); background: #f4e9e9; font-size: 11px; pointer-events: none; }
+
+    .section { width: var(--page); margin: auto; padding: 110px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 38px; }
+    .section-head h2 { margin: 8px 0 0; font-family: var(--serif); font-size: clamp(38px, 4.5vw, 62px); font-weight: 500; line-height: 1.1; }
+    .section-head > p { max-width: 36em; margin: 0; color: var(--muted); line-height: 1.8; }
+    .section-head { padding-top: 28px; border-top: 2px solid var(--accent); }
+    .section-head .eyebrow { display: block; font-weight: 600; letter-spacing: .1em; }
+    .section-head h2 { margin-top: 16px; }
+    #work, .archive, .resume { border-top: 1px solid var(--line); }
+    .case-banner { display: flex; align-items: center; gap: 22px; padding: 24px 36px; background: #ead0d5; border-bottom: 1px solid var(--line); }
+    .case-banner b { color: var(--accent); font-family: var(--serif); font-size: 36px; font-weight: 400; }
+    .case-banner span { font-size: 18px; letter-spacing: .08em; }
+    .case-banner a { margin-left: auto; padding: 12px 0 12px 12px; color: #695257; font-size: 13px; }
+    .case-stage { margin: 0; padding: 20px 34px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f4e6e9; font-size: 15px; font-weight: 500; letter-spacing: .1em; }
+    .case-spacer { position: relative; }
+    .case-spacer::after { content: ''; position: absolute; width: 64px; height: 2px; background: var(--pink-deep); left: calc(50% - 32px); top: 50%; }
+    .profile-strip { display: grid; grid-template-columns: 1.15fr repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .profile-strip > div { min-height: 190px; padding: 28px; background: var(--paper); }
+    .profile-strip .profile-intro { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-content: center; }
+    .profile-intro img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; object-position: center 18%; }
+    .profile-intro h3 { margin: 4px 0 7px; font-size: 20px; }
+    .profile-intro p, .profile-strip p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .profile-strip h3 { margin: 12px 0 8px; font-size: 18px; }
+
+    .project-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .project-index a { min-height: 390px; position: relative; overflow: hidden; background: var(--paper); }
+    .project-index img { height: 100%; object-fit: cover; }
+    .project-index .shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 35%, rgba(28, 21, 23, .82)); }
+    .project-index .card-copy { position: absolute; inset: auto 20px 20px; color: white; }
+    .project-index .number { font-size: 12px; opacity: .72; }
+    .project-index h3 { margin: 7px 0 5px; font-family: var(--serif); font-size: 26px; font-weight: 500; line-height: 1.15; }
+    .project-index p { margin: 0; opacity: .75; font-size: 13px; line-height: 1.5; }
+
+    .case { width: var(--page); margin: 0 auto 22px; background: var(--paper); border: 1px solid var(--line); }
+    .case-cover { min-height: 520px; display: grid; grid-template-columns: .72fr 1.28fr; background: var(--pink); }
+    .case-cover-copy { padding: 56px 46px; display: flex; flex-direction: column; justify-content: center; }
+    .case-cover h2 { margin: 18px 0; font-family: var(--serif); font-size: clamp(38px, 4vw, 54px); font-weight: 500; line-height: 1.1; }
+    .case-cover p { margin: 0; color: #57494d; line-height: 1.85; }
+    .case-meta { display: block; margin-top: 25px; color: var(--muted); font-size: 12px; }
+    .case-cover-media { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; padding: 14px; background: white; }
+    .case-cover-media img { min-height: 0; height: 100%; object-fit: cover; object-position: center; }
+    .case-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); }
+    .case-summary > div { padding: 28px; background: var(--paper); }
+    .case-summary b { color: var(--accent); font-size: 13px; }
+    .case-summary p { margin: 10px 0 0; line-height: 1.7; }
+    .process-row { display: grid; grid-template-columns: repeat(4, 1fr); padding: 50px 34px; background: var(--pink); }
+    .process-row > div { padding: 0 22px; border-right: 1px solid var(--line); }
+    .process-row > div:last-child { border-right: 0; }
+    .process-row span { color: var(--accent); font-size: 12px; }
+    .process-row h3 { margin: 9px 0 8px; font-size: 19px; }
+    .process-row p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .impact-row { display: grid; grid-template-columns: .55fr .65fr 1.8fr; gap: 1px; background: var(--line); }
+    .impact-row > div { padding: 36px; background: var(--ink); color: white; display: flex; flex-direction: column; justify-content: center; }
+    .impact-row b { font-family: var(--serif); font-size: 38px; font-weight: 500; }
+    .impact-row span { margin-top: 8px; color: #d4c6c8; font-size: 12px; }
+    .impact-row img { height: 330px; object-fit: cover; object-position: center 25%; cursor: zoom-in; }
+    .case-spacer { height: 88px; }
+
+    .global-cover .case-cover-media { grid-template-columns: 1fr; }
+    .global-cover .case-cover-media img { object-position: center top; }
+    .assortment { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 34px; background: var(--pink); }
+    .assortment article { padding: 26px; background: var(--paper); }
+    .assortment small { color: var(--accent); }
+    .assortment h3 { margin: 16px 0 8px; font-family: var(--serif); font-size: 27px; font-weight: 500; }
+    .assortment p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .market-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 34px 34px; background: var(--pink); }
+    .market-proof img { height: 330px; object-fit: cover; object-position: top; cursor: zoom-in; }
+
+    .lace-visual { display: grid; grid-template-columns: 1.2fr .8fr; min-height: 500px; padding: 14px; gap: 8px; background: white; }
+    .lace-visual img { height: 100%; object-fit: cover; }
+    .lace-system { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
+    .lace-system article { padding: 34px; background: var(--paper); }
+    .lace-system h3 { margin: 12px 0 10px; font-family: var(--serif); font-size: 25px; font-weight: 500; }
+    .lace-system p { margin: 0; color: var(--muted); line-height: 1.75; }
+    .lace-result { display: grid; grid-template-columns: 1.65fr .35fr; background: var(--pink); }
+    .lace-result .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 18px; }
+    .lace-result img { height: 360px; object-fit: cover; cursor: zoom-in; }
+    .lace-result .result-number { padding: 30px; color: white; background: var(--ink); display: flex; flex-direction: column; justify-content: center; }
+    .result-number b { font-family: var(--serif); font-size: 46px; font-weight: 500; }
+    .result-number span { color: #d4c6c8; font-size: 12px; }
+
+    .triangle-cover .case-cover-media { grid-template-columns: repeat(3, 1fr); }
+    .triangle-logic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
+    .triangle-logic article { min-height: 240px; padding: 34px; background: var(--paper); }
+    .triangle-logic span { color: var(--accent); font-size: 12px; }
+    .triangle-logic h3 { margin: 14px 0 8px; font-size: 22px; }
+    .triangle-logic p { margin: 0; color: var(--muted); line-height: 1.75; }
+
+    .archive { width: var(--page); margin: auto; padding: 110px 0; }
+    .archive-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .archive-card { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 280px; background: var(--paper); border: 1px solid var(--line); }
+    .archive-card img { height: 100%; object-fit: cover; object-position: center top; cursor: zoom-in; }
+    .archive-card > div { padding: 28px; display: flex; flex-direction: column; justify-content: center; }
+    .archive-card h3 { margin: 10px 0 8px; font-family: var(--serif); font-size: 27px; font-weight: 500; }
+    .archive-card p { margin: 0 0 15px; color: var(--muted); line-height: 1.65; }
+    .gallery-button { width: fit-content; min-height: 48px; margin-top: 12px; padding: 10px 17px; border: 1px solid var(--ink); background: transparent; cursor: pointer; }
+    .gallery-button:hover { color: var(--paper); background: var(--ink); }
+    .archive-collages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 46px; }
+    .collage-card { background: var(--paper); }
+    .collage-card img { aspect-ratio: 16 / 7.6; object-fit: cover; object-position: top; cursor: zoom-in; }
+    .collage-card div { padding: 16px; }
+    .collage-card h3 { margin: 0 0 5px; font-size: 18px; }
+    .collage-card p, .collage-card small { margin: 0; color: var(--muted); line-height: 1.55; }
+
+    .patents { width: var(--page); margin: auto; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .patent-inner { width: 100%; margin: 0; padding: 110px 0; }
+    .patent-summary { display: grid; grid-template-columns: .7fr 1.3fr; gap: 40px; align-items: start; margin-bottom: 36px; }
+    .patent-counts { display: flex; gap: 1px; background: var(--line); }
+    .patent-counts div { flex: 1; padding: 26px; background: var(--pink); }
+    .patent-counts b { display: block; font-family: var(--serif); font-size: 44px; font-weight: 500; }
+    .patent-counts span { color: var(--muted); font-size: 12px; }
+    .patent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(99px, 132px)); gap: 14px; }
+    .patent-grid button { min-height: 48px; padding: 0; border: 1px solid var(--line); background: white; cursor: zoom-in; }
+    .patent-grid img { aspect-ratio: 3 / 4; object-fit: cover; }
+    .patent-grid small { display: block; padding: 10px 6px; color: var(--muted); }
+
+    .resume { width: var(--page); margin: auto; padding: 110px 0; }
+    .resume-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 70px; }
+    .resume-side h3 { margin: 10px 0; font-family: var(--serif); font-size: 30px; font-weight: 500; }
+    .resume-side p { color: var(--muted); line-height: 1.8; }
+    .capability-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .capability-list span { padding: 9px 12px; background: var(--paper); border: 1px solid var(--line); font-size: 13px; }
+    .timeline article { display: grid; grid-template-columns: 145px 1fr; gap: 28px; padding: 0 0 30px; margin-bottom: 30px; border-bottom: 1px solid var(--line); }
+    .timeline time { color: var(--accent); font-size: 13px; }
+    .timeline h3 { margin: 0 0 5px; font-size: 21px; }
+    .timeline small { color: var(--muted); }
+    .timeline p { margin: 12px 0 0; color: #57494d; line-height: 1.75; }
+    .experience-details { margin: 22px 0 0; }
+    .experience-details > div { padding: 16px 0; border-top: 1px solid var(--line); }
+    .experience-details dt { color: var(--ink); font-size: 15px; font-weight: 600; }
+    .experience-details dd { margin: 8px 0 0; color: #57494d; font-size: 14px; line-height: 1.85; }
+    .education-heading { margin: 48px 0 20px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 21px; font-weight: 500; }
+    .education-row { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .resume-side .education-heading { margin: 36px 0 20px; font-family: var(--sans); font-size: 20px; }
+    .resume-side .education-card { padding: 24px; }
+    .education-card { padding: 32px; background: var(--paper); border: 1px solid var(--line); }
+    .education-card h3 { margin: 10px 0; font-family: var(--serif); font-size: 27px; font-weight: 500; }
+    .education-card p { color: var(--muted); line-height: 1.75; }
+    .certificate-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+    .certificate-list span { padding: 12px; background: var(--pink); font-size: 13px; }
+
+    .contact { width: var(--page); margin: auto; padding: 110px 32px; color: white; background: var(--ink); text-align: center; }
+    .contact h2 { margin: 15px 0 20px; font-family: var(--serif); font-size: clamp(44px, 5.5vw, 76px); font-weight: 500; }
+    .contact p { color: #d4c6c8; }
+    .contact-links { display: flex; justify-content: center; gap: 12px; margin-top: 34px; }
+    .contact-links a { min-height: 50px; padding: 14px 22px; border: 1px solid rgba(255,255,255,.48); }
+    .contact-links a:hover { background: white; color: var(--ink); }
+    footer { padding: 28px; color: var(--muted); background: var(--pink); text-align: center; font-size: 12px; }
+
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 60; align-items: center; justify-content: center; padding: 24px; background: rgba(22, 17, 19, .95); }
+    .lightbox.is-open { display: flex; }
+    .lightbox img { max-width: calc(100vw - 120px); max-height: calc(100vh - 90px); width: auto; height: auto; object-fit: contain; }
+    .lightbox-close, .lightbox-nav { position: absolute; min-width: 48px; min-height: 48px; border: 1px solid rgba(255,255,255,.5); color: white; background: rgba(0,0,0,.18); cursor: pointer; }
+    .lightbox-close { top: 20px; right: 20px; }
+    .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+    .lightbox-count { position: absolute; bottom: 20px; color: white; font-size: 13px; }
+
+    .project-index a, .archive-card, .collage-card, .education-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(86, 49, 60, .045); }
+    .case { border-radius: 14px; overflow: hidden; box-shadow: 0 8px 28px rgba(86, 49, 60, .045); }
+    .gallery-button { border-radius: 7px; transition: background .2s ease, color .2s ease; }
+    .project-index a, .archive-card, .collage-card { transition: box-shadow .25s ease; }
+    @media (hover: hover) {
+      .project-index a:hover, .archive-card:hover, .collage-card:hover { box-shadow: 0 10px 28px rgba(86, 49, 60, .1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .project-index a, .archive-card, .collage-card, .gallery-button,
+      :is(.hero-gallery a, .project-index a, .patent-grid button) img,
+      img[data-lightbox], img[data-gallery-open] { transition: none; }
+    }
+
+    .case-summary, .lace-system, .triangle-logic, .assortment, .process-row { gap: 24px; padding: 32px; background: var(--pink); }
+    .case-summary > div, .lace-system article, .triangle-logic article, .assortment article, .process-row > div { min-width: 0; padding: 30px; border: 0; border-radius: 10px; background: var(--paper); }
+    .case-cover-media, .lace-visual { gap: 18px; padding: 22px; }
+    .impact-row, .market-proof { gap: 24px; padding: 32px; background: var(--pink); }
+    .impact-row > div, .impact-row > img, .market-proof img { min-width: 0; border-radius: 10px; }
+    .impact-row > div { padding: 28px; }
+    .impact-row b { font-size: clamp(26px, 2.5vw, 38px); overflow-wrap: anywhere; }
+    .lace-result { gap: 24px; padding: 32px; }
+    .lace-result .image-grid { gap: 18px; padding: 0; min-width: 0; }
+    .lace-result .result-number { min-width: 0; padding: 24px; border-radius: 10px; }
+    .lace-result img { border-radius: 8px; }
+    .project-index, .archive-grid, .archive-collages { gap: 24px; }
+    .archive-card > div { padding: 32px; }
+    .collage-card div { padding: 24px; }
+    .education-row { gap: 20px; }
+
+    @media (max-width: 980px) {
+      :root { --page: calc(100% - 40px); }
+      main { padding-left: 112px; }
+      .chapter-rail { left: 4px; width: 112px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-copy { min-height: auto; }
+      .hero-gallery { height: 528px; min-height: 0; margin: 0 18px; }
+      .profile-strip { grid-template-columns: 1fr 1fr; }
+      .project-index { grid-template-columns: 1fr 1fr; }
+      .project-index a { min-height: 360px; }
+      .case-cover { grid-template-columns: 1fr; }
+      .case-cover-media { min-height: 500px; }
+      .archive-grid { grid-template-columns: 1fr; }
+      .archive-collages { grid-template-columns: 1fr 1fr; }
+      .patent-grid { grid-template-columns: repeat(auto-fit, minmax(99px, 121px)); }
+      .resume-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 680px) {
+      :root { --page: 100%; }
+      main { padding-left: 40px; }
+      .chapter-rail { left: 0; width: 40px; }
+      .rail-title, .rail-label, .rail-count { display: none; }
+      .chapter-rail a { height: 44px; }
+      .rail-children { margin-left: 0; padding-left: 0; }
+      .chapter-rail .rail-children a { height: 44px; width: 40px; justify-content: center; }
+      .rail-child-label { display: none; }
+      .chapter-rail .rail-children a[aria-current]::before { left: 2px; }
+      .rail-dot { flex-basis: 40px; }
+      .rail-links::before, .rail-fill { left: 19px; top: 22px; bottom: 22px; }
+      .desktop-nav { display: none; }
+      .menu-button { display: block; }
+      .header-inner { padding: 0 16px; }
+      .hero { border: 0; }
+      .hero-copy { min-height: auto; padding: 52px 20px 42px; }
+      .identity img { width: 54px; height: 54px; }
+      .hero h1 { margin-top: 28px; font-size: clamp(30px, 10vw, 45px); }
+      .hero-stats { gap: 18px; }
+      .hero-gallery { height: 429px; min-height: 0; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); padding: 8px; margin: 0 12px; gap: 8px; }
+      .hero-gallery figure:first-child { grid-column: auto; grid-row: 1 / 3; }
+      .section, .archive, .resume, .patent-inner { padding: 76px 16px; }
+      .section-head { align-items: flex-start; flex-direction: column; margin-bottom: 28px; }
+      .section-head h2 { font-size: 40px; }
+      .profile-strip { grid-template-columns: 1fr; }
+      .profile-strip > div { min-height: auto; }
+      .project-index { grid-template-columns: 1fr; }
+      .project-index a { min-height: 440px; }
+      .case { width: 100%; }
+      .case-banner { padding: 18px 20px; gap: 14px; }
+      .case-banner b { font-size: 30px; }
+      .case-banner span { font-size: 16px; }
+      .case-banner a { font-size: 12px; }
+      .case-stage { padding: 18px 20px; }
+      .case-cover { min-height: auto; }
+      .case-cover-copy { padding: 46px 22px; }
+      .case-cover h2 { font-size: clamp(25px, 7.6vw, 40px); }
+      .case-banner { flex-wrap: wrap; }
+      .menu-button, .gallery-button { min-height: 44px; }
+      .contact-links a { overflow-wrap: anywhere; }
+      .case-cover-media { min-height: 430px; padding: 14px; gap: 12px; }
+      .case-summary, .process-row, .assortment, .lace-system, .triangle-logic { grid-template-columns: 1fr; }
+      .case-summary > div, .process-row > div { padding: 24px 20px; }
+      .case-summary, .process-row, .assortment, .lace-system, .triangle-logic { padding: 16px; gap: 16px; }
+      .process-row > div { border: 0; }
+      .impact-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+      .impact-row > div { padding: 24px 16px; }
+      .impact-row b { font-size: 30px; overflow-wrap: anywhere; }
+      .impact-row img { grid-column: 1 / 3; height: 280px; }
+      .impact-row { padding: 16px; gap: 12px; }
+      .market-proof { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+      .market-proof img { height: 230px; }
+      .lace-visual { min-height: 420px; grid-template-columns: 1fr; padding: 14px; gap: 14px; }
+      .lace-result { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+      .lace-result .image-grid { grid-template-columns: 1fr 1fr; }
+      .lace-result img { height: 240px; }
+      .lace-result img:last-child { grid-column: 1 / 3; }
+      .triangle-cover .case-cover-media { min-height: 360px; }
+      .archive-card { grid-template-columns: 1fr; }
+      .archive-card img { min-height: 250px; }
+      .archive-collages { grid-template-columns: 1fr; }
+      .patent-summary { grid-template-columns: 1fr; }
+      .patent-grid { grid-template-columns: repeat(auto-fit, minmax(88px, 106px)); gap: 10px; }
+      .education-row { grid-template-columns: 1fr; }
+      .timeline article { grid-template-columns: 1fr; gap: 10px; }
+      .contact { padding: 82px 20px; }
+      .contact-links { flex-direction: column; }
+      .lightbox img { max-width: calc(100vw - 24px); max-height: calc(100vh - 120px); }
+      .lightbox-prev { left: 10px; bottom: 18px; top: auto; transform: none; }
+      .lightbox-next { right: 10px; bottom: 18px; top: auto; transform: none; }
+    }
+    .collection-board { padding: 28px; background: var(--paper); }
+    .collection-board > img { display: block; width: 100%; max-height: 620px; object-fit: contain; border-radius: 10px; }
+    .collection-extension { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 28px; align-items: center; background: var(--paper); }
+    .collection-extension > img { width: 100%; height: 580px; object-fit: contain; border-radius: 10px; }
+    .collection-extension h3 { font-family: var(--serif); font-size: 30px; margin: 16px 0; }
+    .collection-extension p { line-height: 1.9; max-width: 28em; }
+    .homewear-crop { position: relative; display: block; width: 100%; aspect-ratio: 412 / 253; overflow: hidden; border-radius: 10px; border: 0; padding: 0; background: var(--paper); cursor: zoom-in; }
+    .homewear-crop img, .lightbox-homewear img { position: absolute; bottom: 0; left: 0; width: 180.5825%; max-width: none; height: auto; max-height: none; }
+    .lightbox-frame { display: contents; }
+    .lightbox-frame.lightbox-homewear { display: block; position: relative; width: min(900px, calc(100vw - 32px), calc((100vh - 140px) * 412 / 253)); aspect-ratio: 412 / 253; overflow: hidden; border-radius: 10px; }
+    #lace .lace-result .image-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #lace .lace-result img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center; grid-column: auto; }
+    @media (hover: hover) and (pointer: fine) { .homewear-crop:hover img { transform: scale(1.025); transform-origin: 27.69% 88.28%; } }
+    .homewear-crop img { transition: transform .5s; }
+    @media (max-width: 680px) { .collection-extension { grid-template-columns: 1fr; gap: 20px; padding: 20px; } .collection-extension > img { height: auto; max-height: 580px; } .collection-board { padding: 20px; } }
+  </style>
 </head>
 <body>
-<nav><div class="logo">崔悦</div><ul><li><a href="#experience">经历</a></li><li><a href="#patents">专利</a></li><li><a href="#works">作品</a></li><li><a href="#about">关于</a></li><li><a href="#contact">联系</a></li></ul></nav>
-<div class="hero"><div class="deco"></div><h1>崔悦</h1><div class="subtitle">内衣设计师</div><p class="desc">用细腻的针脚，编织属于女性的温柔与自信<br>7年设计经验 · 热爱传统文化 · 扎实绘画功底</p><div class="hero-contact"><span>📱 18261985119</span><span class="hc-sep"> · </span><span>✉️ 18261985119@163.com</span></div><div class="scroll-hint">↓ 向下滑动</div></div>
-<section id="experience"><h2 class="section-title">工作经历</h2><div class="section-line"></div><p class="section-desc">7年深耕内衣设计领域</p><div class="experience"><div class="exp-item"><div class="exp-time">2023.02—2026.08</div><div class="exp-detail"><h3>内衣设计师</h3><div class="company">彼悦（北京）科技有限公司 · ubras</div><p>负责ubras品牌内衣设计工作，涵盖每季度款式设计，包括市场调研、趋势分析、设计企划、款式设计、样品实现及大货对接，涉及无尺码、蕾丝、塑身、义乳、内裤等多品类开发。
-2025.10-2026.08，独立完成ubras品牌出海0-1货盘搭建，涵盖自主研发与外采等多项内容，完成货盘搭建、产品设计到落地的全流程项目管理。
-2026年，完成 ubras 品牌十周年秀场-蓝标系列LOOK设计，包括虞书欣同款15 天上线发货等。
-与此同时，工作间隙中我也承担大部分带新人的工作，会帮新人梳理公司流程、拆解项目任务，做任务跟进与复盘，积累了小型项目统筹、团队协作的实操经验，已落地有睡眠文胸小项目。</p></div></div><div class="exp-item"><div class="exp-time">2022.05 — 2023.01</div><div class="exp-detail"><h3>内衣设计师</h3><div class="company">杭州七珑珠电子商务有限公司·七色纺</div><p>负责爆品企划输出，与供应商对接完成临采及订单需求。独立完成多款自研文胸和成采款式的开发上市，完成23SS小裤系列设计开发，包括素色与印花款开发、多款上市。</p></div></div><div class="exp-item"><div class="exp-time">2021.01 — 2022.05</div><div class="exp-detail"><h3>内衣设计师</h3><div class="company">顶呱呱彩棉服饰有限公司·顶瓜瓜</div><p>负责文胸的设计企划与外采开发，独立开发文胸小三角系列产品，与供应商对接、指导门店陈列效果，同时负责小裤、保暖衣等品类的印花开发。兼任文胸袜子T恤品类产品经理。</p></div></div><div class="exp-item"><div class="exp-time">2019.08 — 2020.12</div><div class="exp-detail"><h3>内衣设计师助理</h3><div class="company">苏州爱慕内衣有限公司·乎兮/爱慕</div><p>参与”乎兮”品牌系列设计，参与”爱慕CHUANG”第一季开发，代表作品”投影”系列；协助主设完成多季产品开发，独立完成多个系列的设计及版型验证。</p></div></div></div></section>
-<section id="patents"><h2 class="section-title">专利证书</h2><div class="section-line"></div><p class="section-desc">专业能力的认可</p><div class="patents-grid"><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p1_import.jpg" alt="实用新型专利" onclick="event.stopPropagation();openLB(8,0)"></div><div class="patent-info"><h3>实用新型专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p2_import.jpg" alt="实用新型专利" onclick="event.stopPropagation();openLB(9,0)"></div><div class="patent-info"><h3>实用新型专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p3_import.jpg" alt="实用新型专利" onclick="event.stopPropagation();openLB(10,0)"></div><div class="patent-info"><h3>实用新型专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p4_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(11,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p5_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(12,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p6_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(13,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p7_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(14,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p8_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(15,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p9_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(16,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p10_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(17,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div><div class="patent-card"><div class="patent-img"><img src="images/patent_img_p11_import.jpg" alt="外观专利" onclick="event.stopPropagation();openLB(18,0)"></div><div class="patent-info"><h3>外观专利</h3></div></div></div></section>
-<section id="works"><h2 class="section-title">作品展示</h2><div class="section-line"></div><p class="section-desc">每一个系列，都是一段关于美的故事</p><div class="works-grid"><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="15" data-lb="0" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(0,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w1_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_1.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_2.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_3.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_4.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_5.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_6.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_7.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_8.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_9.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_10.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_11.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_12.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_13.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w1_import_14.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),2)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),3)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),4)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),5)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),6)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),7)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),8)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),9)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),10)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),11)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),12)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),13)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),14)"></span></div><div class="tag">ubras</div><div class="bottom"><h3>蓝标</h3><p>品牌十周年大秀-蓝标系列 look 一览</p></div></div><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="9" data-lb="1" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(1,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w2_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_1.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_2.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_3.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_4.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_5.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_6.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_7.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w2_import_8.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),2)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),3)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),4)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),5)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),6)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),7)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),8)"></span></div><div class="tag">ubras</div><div class="bottom"><h3>爆品-无尺码桑蚕丝系列</h3><p>开辟了长丝+短纤结合的新设计理念，同年此款成为实体店铺爆款产品，以无尺码品类成交价最高款式售出5W+件，次年新增细肩带款式+细分赛道睡眠文胸。</p></div></div><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="9" data-lb="2" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(2,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w3_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_1.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_2.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_3.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_4.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_5.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_6.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_7.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w3_import_8.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),2)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),3)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),4)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),5)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),6)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),7)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),8)"></span></div><div class="tag">ubras</div><div class="bottom"><h3>粉标</h3><p>蕾丝系列/活力系列-已上架款式部分概览</p></div></div><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="10" data-lb="3" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(3,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w4_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_1.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_2.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_3.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_4.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_5.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_6.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_7.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_8.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w4_import_9.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),2)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),3)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),4)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),5)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),6)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),7)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),8)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),9)"></span></div><div class="tag">ubras</div><div class="bottom"><h3>内裤&amp;功能性产品</h3><p>日常内裤｜哺乳文胸｜孕期内裤｜塑身等</p></div></div><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="2" data-lb="4" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(4,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w5_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w5_import_1.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span></div><div class="tag">ubras</div><div class="bottom"><h3>海外产品线</h3><p>品牌出海，0-1 货盘搭建及流程跑通，涉及文胸、内裤、乳贴等产品，可参考Amazon/Tiktok链接</p></div></div><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="3" data-lb="5" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(5,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w6_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w6_import_1.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w6_import_2.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),2)"></span></div><div class="tag">七色纺</div><div class="bottom"><h3>自研已上架款式一览</h3><p>由于大部分款式是走买手流程，故并未放置在此处</p></div></div><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="10" data-lb="6" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(6,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w7_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_1.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_2.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_3.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_4.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_5.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_6.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_7.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_8.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w7_import_9.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),2)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),3)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),4)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),5)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),6)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),7)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),8)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),9)"></span></div><div class="tag">顶瓜瓜</div><div class="bottom"><h3>爆品-小三角系列</h3><p>文胸｜内裤｜印花设计</p></div></div><div class="work-item"><div class="gallery-imgs" data-cur="0" data-total="9" data-lb="7" ontouchstart="galTouchStart(event,this)" ontouchend="galTouchEnd(event,this)" onmousedown="galMouseDown(event,this)" onmouseup="galMouseUp(event,this)" onclick="event.stopPropagation();openLB(7,parseInt(this.getAttribute('data-cur'))||0)"><div class="gallery-img active" style="background:url('images/work_w8_import_0.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_1.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_2.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_3.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_4.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_5.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_6.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_7.jpg') center/cover"></div><div class="gallery-img" style="background:url('images/work_w8_import_8.jpg') center/cover"></div></div><div class="dots"><span class="dot active" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),0)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),1)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),2)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),3)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),4)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),5)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),6)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),7)"></span><span class="dot" onclick="event.stopPropagation();switchImg(this.closest('.work-item'),8)"></span></div><div class="tag">乎兮/爱慕</div><div class="bottom"><h3>爱慕CHUANG/乎兮</h3><p>参与爱慕 CHUANG 第一季设计研发，乎兮品牌各季度开发，除设计外还涉及制版流程。</p></div></div></div></section>
-<section id="plannings"><h2 class="section-title">企划设计</h2><div class="section-line"></div><p class="section-desc">每一个成功的系列，都始于精准的企划</p><div class="plannings-grid"></div></section>
-<section id="about"><h2 class="section-title">关于我</h2><div class="section-line"></div><p class="section-desc">用设计传递女性的力量与温柔</p><div class="about-card"><div class="photo" style="background:url('images/heroPhoto.jpg') center/cover"></div><div class="content"><div class="label">ABOUT ME</div><h2>热爱设计<br>更热爱生活</h2><p>我是一名拥有7年经验的内衣设计师，从苏州大学服装与服饰设计专业毕业后，一直在内衣设计领域深耕。</p><p>我的职业经历从传统内衣工厂起步，先后经历过线下品牌、线上初创公司、行业 top 品牌。在 ubras 前期、我要负责文胸为主的款式开发，从企划到设计画图、打样到产品落地等全流程跟进；后期独立承接ubras海外出海货盘项目，属于从0到1的中小型项目，我一个人完整负责从企划、版型设计、面料确认、品质把控到最终产品落地的全部工作。工作中我追求将舒适与美感完美融合，从企划设想到成衣出货，每一处细节都倾注心血。</p><p>工作之外，我喜欢旅行和摄影，用镜头记录生活中的美好瞬间，这些经历也为我的设计带来源源不断的灵感。</p><div class="signature">— 崔悦</div></div></div><div class="features"><div class="feature"><div class="icon">✦</div><h3>品牌经验</h3><p>曾服务于爱慕、ubras等知名内衣品牌，具备丰富的品牌设计经验</p></div><div class="feature"><div class="icon">♡</div><h3>全链路能力</h3><p>从市场调研、款式设计到样品实现、大货对接，独立完成设计全流程</p></div><div class="feature"><div class="icon">✿</div><h3>跨界视野</h3><p>热爱旅行与摄影，将生活美学融入设计，赋予作品独特灵魂</p></div></div></section>
-<section id="education"><h2 class="section-title">教育背景</h2><div class="section-line"></div><p class="section-desc">扎实的专业基础</p><div class="edu-card"><div class="school">苏州大学</div><div class="major">服装与服饰设计 · 本科</div><div class="time">2015 — 2019</div><div class="awards">2017-2018年 任苏州大学艺术学院社团联合会副主席<br>2016-2017年 苏州大学”学习优秀二等奖”<br>2018年 苏州大学艺术学院”优秀学生干部”<br>”东华杯”第十二届中国大学生服装立裁设计大赛 优秀奖<br>2018年 全国大学生工业设计大赛 优秀设计奖</div></div></section>
-<section id="certificates"><h2 class="section-title">资格证书</h2><div class="section-line"></div><div class="cert-grid"><div class="cert-item"><div class="cert-icon">✦</div><p>高中美术教师资格证</p></div><div class="cert-item"><div class="cert-icon">✦</div><p>服装制版师四级</p></div><div class="cert-item"><div class="cert-icon">✦</div><p>英语四级</p></div><div class="cert-item"><div class="cert-icon">✦</div><p>普通话二级甲等</p></div></div></section>
-<div id="contact" class="contact-section"><h2>期待与您相遇</h2><div class="line"></div><p>如果您对我的设计感兴趣，欢迎随时联系</p><div class="contact-info"><div class="contact-item"><div class="icon">📱</div><p>电话</p><p><a href="tel:18261985119">18261985119</a></p></div><div class="contact-item"><div class="icon">✉️</div><p>邮箱</p><p><a href="mailto:18261985119@163.com">18261985119@163.com</a></p></div></div><a href="mailto:18261985119@163.com" class="btn">发邮件给我</a></div>
-<script>var LB_DATA=[["images/work_w1_import_0.jpg","images/work_w1_import_1.jpg","images/work_w1_import_2.jpg","images/work_w1_import_3.jpg","images/work_w1_import_4.jpg","images/work_w1_import_5.jpg","images/work_w1_import_6.jpg","images/work_w1_import_7.jpg","images/work_w1_import_8.jpg","images/work_w1_import_9.jpg","images/work_w1_import_10.jpg","images/work_w1_import_11.jpg","images/work_w1_import_12.jpg","images/work_w1_import_13.jpg","images/work_w1_import_14.jpg"],["images/work_w2_import_0.jpg","images/work_w2_import_1.jpg","images/work_w2_import_2.jpg","images/work_w2_import_3.jpg","images/work_w2_import_4.jpg","images/work_w2_import_5.jpg","images/work_w2_import_6.jpg","images/work_w2_import_7.jpg","images/work_w2_import_8.jpg"],["images/work_w3_import_0.jpg","images/work_w3_import_1.jpg","images/work_w3_import_2.jpg","images/work_w3_import_3.jpg","images/work_w3_import_4.jpg","images/work_w3_import_5.jpg","images/work_w3_import_6.jpg","images/work_w3_import_7.jpg","images/work_w3_import_8.jpg"],["images/work_w4_import_0.jpg","images/work_w4_import_1.jpg","images/work_w4_import_2.jpg","images/work_w4_import_3.jpg","images/work_w4_import_4.jpg","images/work_w4_import_5.jpg","images/work_w4_import_6.jpg","images/work_w4_import_7.jpg","images/work_w4_import_8.jpg","images/work_w4_import_9.jpg"],["images/work_w5_import_0.jpg","images/work_w5_import_1.jpg"],["images/work_w6_import_0.jpg","images/work_w6_import_1.jpg","images/work_w6_import_2.jpg"],["images/work_w7_import_0.jpg","images/work_w7_import_1.jpg","images/work_w7_import_2.jpg","images/work_w7_import_3.jpg","images/work_w7_import_4.jpg","images/work_w7_import_5.jpg","images/work_w7_import_6.jpg","images/work_w7_import_7.jpg","images/work_w7_import_8.jpg","images/work_w7_import_9.jpg"],["images/work_w8_import_0.jpg","images/work_w8_import_1.jpg","images/work_w8_import_2.jpg","images/work_w8_import_3.jpg","images/work_w8_import_4.jpg","images/work_w8_import_5.jpg","images/work_w8_import_6.jpg","images/work_w8_import_7.jpg","images/work_w8_import_8.jpg"],["images/patent_img_p1_import.jpg"],["images/patent_img_p2_import.jpg"],["images/patent_img_p3_import.jpg"],["images/patent_img_p4_import.jpg"],["images/patent_img_p5_import.jpg"],["images/patent_img_p6_import.jpg"],["images/patent_img_p7_import.jpg"],["images/patent_img_p8_import.jpg"],["images/patent_img_p9_import.jpg"],["images/patent_img_p10_import.jpg"],["images/patent_img_p11_import.jpg"]];function switchImg(item,index){var gal=item.querySelector(".gallery-imgs");if(!gal)return;var total=parseInt(gal.getAttribute("data-total"));if(index<0)index=total-1;if(index>=total)index=0;var imgs=gal.querySelectorAll(".gallery-img");var dots=item.querySelectorAll(".dot");imgs.forEach(function(img,i){img.classList.remove("active","prev");if(i<index)img.classList.add("prev");else if(i>index){}else img.classList.add("active");});dots.forEach(function(d,i){d.classList.toggle("active",i===index)});gal.setAttribute("data-cur",index);}function galTouchStart(e,gal){gal._sx=e.touches[0].clientX;}function galTouchEnd(e,gal){var dx=e.changedTouches[0].clientX-gal._sx;if(Math.abs(dx)>40){var cur=parseInt(gal.getAttribute("data-cur"));switchImg(gal.closest(".work-item"),cur+(dx<0?1:-1));}}function galMouseDown(e,gal){e.preventDefault();gal._sx=e.clientX;gal._drag=true;}function galMouseUp(e,gal){if(!gal._drag)return;gal._drag=false;var dx=e.clientX-gal._sx;if(Math.abs(dx)>40){var cur=parseInt(gal.getAttribute("data-cur"));switchImg(gal.closest(".work-item"),cur+(dx<0?1:-1));}}var lbAll=LB_DATA,lbImgs=[],lbIdx=0;function openLB(setIdx,imgIdx){lbImgs=lbAll[setIdx]||[];lbIdx=imgIdx||0;showLBImg();document.getElementById("lb").classList.add("active");}function closeLB(){document.getElementById("lb").classList.remove("active");}function showLBImg(){document.getElementById("lbImg").src=lbImgs[lbIdx];var ct=document.getElementById("lbCount");ct.textContent=(lbIdx+1)+" / "+lbImgs.length;document.getElementById("lbPrev").style.display=lbImgs.length>1?"flex":"none";document.getElementById("lbNext").style.display=lbImgs.length>1?"flex":"none";}function lbPrev(){lbIdx=(lbIdx-1+lbImgs.length)%lbImgs.length;showLBImg();}function lbNext(){lbIdx=(lbIdx+1)%lbImgs.length;showLBImg();}document.addEventListener("keydown",function(e){if(!document.getElementById("lb").classList.contains("active"))return;if(e.key==="Escape")closeLB();if(e.key==="ArrowLeft")lbPrev();if(e.key==="ArrowRight")lbNext();});</script>
-<div class="lightbox" id="lb" onclick="if(event.target===this||event.target.classList.contains('lb-close'))closeLB()"><div class="lb-close" onclick="closeLB()">✕</div><div class="lb-nav lb-prev" id="lbPrev" onclick="event.stopPropagation();lbPrev()">‹</div><img id="lbImg" src="" onclick="event.stopPropagation()"><div class="lb-nav lb-next" id="lbNext" onclick="event.stopPropagation();lbNext()">›</div><div class="lb-counter" id="lbCount"></div></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">崔悦 · CUI YUE</a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#work">代表作品</a><a href="#archive">作品档案</a><a href="#patents">专利</a><a href="#experience">经历</a><a href="#contact">联系</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobileNav">菜单</button>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+    <a href="#work">代表作品</a><a href="#archive">作品档案</a><a href="#patents">专利</a><a href="#experience">经历</a><a href="#contact">联系</a>
+  </nav>
+
+  <nav class="chapter-rail" aria-label="阅读章节导航">
+    <p class="rail-title">CUI YUE / INDEX</p>
+    <div class="rail-links"><div class="rail-fill" aria-hidden="true"></div>
+      <a href="#top" aria-label="首页"><span class="rail-dot"></span><span class="rail-label">序 · 首页</span></a>
+      <a href="#profile" aria-label="关于我"><span class="rail-dot"></span><span class="rail-label">01 关于我</span></a>
+      <a href="#work" aria-label="代表作品"><span class="rail-dot"></span><span class="rail-label">02 代表作品</span></a>
+      <a href="#archive" aria-label="更多作品"><span class="rail-dot"></span><span class="rail-label">03 更多作品</span></a>
+      <a href="#patents" aria-label="专利成果"><span class="rail-dot"></span><span class="rail-label">04 专利成果</span></a>
+      <a href="#experience" aria-label="经历与教育"><span class="rail-dot"></span><span class="rail-label">05 经历与教育</span></a>
+      <a href="#contact" aria-label="联系我"><span class="rail-dot"></span><span class="rail-label">终 · 联系我</span></a>
+    </div>
+    <div class="rail-count"><span id="railPercent">0</span><small>% 已浏览</small></div>
+  </nav>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="identity"><img src="images/aboutPhoto.jpg" alt="崔悦"><div><strong>崔悦</strong><span>内衣设计师 / 产品企划</span></div></div>
+        <h1>让设计被看见<br>也让产品被选择</h1>
+        <p>我将审美、穿着体验与商业目标放在同一条产品链路中思考。从趋势和用户需求出发，完成企划、款式、版型、面料、样品、品质与大货协同。</p>
+        <div class="hero-stats"><div><b>7年</b><span>内衣设计经验</span></div><div><b>0到1</b><span>海外产品线</span></div><div><b>11项</b><span>产品专利</span></div></div>
+        <a class="hero-link" href="#work">从代表作品开始阅读 ↓</a>
+      </div>
+      <div class="hero-gallery">
+        <figure><a href="#blue" aria-label="查看秀场造型与商品化项目"><img src="images/work_w1_import_2.jpg" alt="秀场造型作品"><figcaption>秀场造型与商品化 ↗</figcaption></a></figure>
+        <figure><a href="#lace" aria-label="查看蕾丝系列项目"><img src="images/work_w3_import_1.jpg" alt="蕾丝系列设计"><figcaption>蕾丝系列 ↗</figcaption></a></figure>
+        <figure><a href="#triangle" aria-label="查看产品结构创新项目"><img src="images/work_w7_import_0.jpg" alt="小三角系列设计"><figcaption>产品结构创新 ↗</figcaption></a></figure>
+      </div>
+    </section>
+
+    <section class="section" id="profile">
+      <div class="section-head"><div><span class="eyebrow">01 / 关于我 · Profile</span><h2>设计不止于一张效果图</h2></div><p>我的工作覆盖趋势洞察、产品企划、多品类设计、版型面料、供应链协同与项目统筹。</p></div>
+      <div class="profile-strip">
+        <div class="profile-intro"><img src="images/aboutPhoto.jpg" alt="崔悦"><div><span class="eyebrow">Designer</span><h3>崔悦</h3><p>苏州大学<br>服装与服饰设计</p></div></div>
+        <div><span class="eyebrow">Aesthetic</span><h3>审美与用户体验</h3><p>把女性真实穿着感受、材料语言与视觉表达放在一起考虑。</p></div>
+        <div><span class="eyebrow">Product</span><h3>产品全链路</h3><p>从企划和款式到版型、面料、样品、品质及量产落地。</p></div>
+        <div><span class="eyebrow">Management</span><h3>协作与推动</h3><p>完成跨境货盘、供应链协同、小型项目统筹与新人带教。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head"><div><span class="eyebrow">02 / 代表作品 · Selected Work</span><h2>代表项目</h2></div></div>
+      <div class="project-index">
+        <a href="#blue"><img src="images/work_w1_import_0.jpg" alt="十周年秀场造型"><span class="shade"></span><div class="card-copy"><span class="number">项目 01 · 秀场设计</span><h3>秀场造型到<br>15天商品化</h3><p>场景、结构、试穿与量产</p></div></a>
+        <a href="#global"><img src="images/work_w5_import_0.jpg" alt="海外产品线"><span class="shade"></span><div class="card-copy"><span class="number">项目 02 · 产品企划</span><h3>从0到1搭建<br>海外产品线</h3><p>产品架构与跨境上架</p></div></a>
+        <a href="#lace"><img src="images/work_w3_import_2.jpg" alt="蕾丝系列"><span class="shade"></span><div class="card-copy"><span class="number">项目 03 · 系列设计</span><h3>情绪方向到<br>系列呈现</h3><p>款式系统与商业结果</p></div></a>
+        <a href="#triangle"><img src="images/work_w7_import_1.jpg" alt="小三角文胸系列"><span class="shade"></span><div class="card-copy"><span class="number">项目 04 · 结构创新</span><h3>舒适与支撑<br>产品创新</h3><p>问题、方案与价值</p></div></a>
+      </div>
+    </section>
+
+    <article class="case" id="blue">
+      <div class="case-banner"><b>01</b><span>秀场设计与商品化</span><a href="#work">作品目录 ↑</a></div>
+      <div class="case-cover">
+        <div class="case-cover-copy"><span class="eyebrow">Case 01</span><h2>秀场造型<br>设计与快速商品化</h2><p>从舞台视觉出发，完成结构、面料、试穿与量产之间的完整转译。</p><small class="case-meta">项目背景：ubras 十周年蓝标</small><button class="gallery-button" type="button" data-gallery="blue">查看16张作品</button></div>
+        <div class="case-cover-media"><img src="images/work_w1_import_2.jpg" alt="秀场造型正面"><img src="images/work_w1_import_0.jpg" alt="秀场造型侧面"></div>
+      </div>
+      <div class="case-summary"><div><b>我的职责</b><p>系列 LOOK 设计、款式结构、面料配色、样衣与试穿调整、商品化落地。</p></div><div><b>项目挑战</b><p>兼顾海边秀场环境、艺人舞台表现与“舒适自由”的产品方向。</p></div><div><b>最终结果</b><p>明星同款在大秀结束后15天内完成版型调整、确认、生产与发货。</p></div></div>
+      <h3 class="case-stage">设计推进 / 从场景到商品</h3>
+      <div class="process-row"><div><span>01</span><h3>场景与品牌</h3><p>将海边音乐秀的流动感与舒适自由的方向统一。</p></div><div><span>02</span><h3>结构与比例</h3><p>黑色主体与粉色边带形成记忆点，兼顾舞台识别与稳定。</p></div><div><span>03</span><h3>试穿与调整</h3><p>持续跟进打版、样衣和试穿，控制动作中的贴合与安全。</p></div><div><span>04</span><h3>商品化</h3><p>把秀场造型转译成可量产款式，快速承接传播热度。</p></div></div>
+      <h3 class="case-stage">项目成果 / 秀场与商品化</h3>
+      <div class="impact-row"><div><b>15天</b><span>秀场同款上线发货</span></div><div><b>11 LOOKS</b><span>系列化舞台呈现</span></div><img src="images/work_w1_import_1.jpg" alt="蓝标系列完整造型" data-lightbox="images/work_w1_import_1.jpg"></div>
+      <h3 class="case-stage">相关款式 / 字母织带文胸与内裤</h3>
+      <div class="collection-extension"><img src="images/work_w3_import_8.jpg" alt="字母织带文胸与配套内裤" data-lightbox="images/work_w3_import_8.jpg"><div><span class="eyebrow">Letter Band</span><h3>字母织带<br>成套表达</h3><p>以对比色字母织带串联文胸与内裤，在简洁款式中呈现鲜明的线条与律动感。</p><div class="hero-stats"><div><b>1W+</b><span>字母织带文胸销量</span></div><div><b>10W+</b><span>字母织带内裤销量</span></div></div></div></div>
+    </article>
+    <div class="case-spacer"></div>
+
+    <article class="case" id="global">
+      <div class="case-banner"><b>02</b><span>海外产品线企划</span><a href="#work">作品目录 ↑</a></div>
+      <div class="case-cover global-cover">
+        <div class="case-cover-copy"><span class="eyebrow">Case 02</span><h2>从0到1搭建<br>海外产品线</h2><p>围绕海外消费者的日常穿着场景，建立由轻到强的支撑货盘，并推动多品类上架。</p><small class="case-meta">项目背景：跨境产品开发</small><button class="gallery-button" type="button" data-gallery="global">查看2张作品</button></div>
+        <div class="case-cover-media"><img src="images/work_w5_import_0.jpg" alt="海外产品线页面"></div>
+      </div>
+      <div class="case-summary"><div><b>我的职责</b><p>企划、版型、面料、样品、品质与大货全流程统筹。</p></div><div><b>产品范围</b><p>自主研发与外采协同，覆盖文胸、内裤、乳贴等多品类。</p></div><div><b>项目结果</b><p>完成货盘结构搭建，并将新品推进至海外渠道上架。</p></div></div>
+      <h3 class="case-stage">产品架构 / 三种支撑需求</h3>
+      <div class="assortment"><article><small>DAILYWEAR</small><h3>Light Support</h3><p>经典点胶与轻量日常，解决基础舒适需求。</p></article><article><small>DAILYWEAR</small><h3>Medium Support</h3><p>稳定承托与通勤场景，平衡包容度和支撑。</p></article><article><small>SOLUTION</small><h3>Strong Support</h3><p>覆盖大码、聚拢与更细分的功能性需求。</p></article></div>
+      <h3 class="case-stage">上线呈现 / 海外渠道</h3>
+      <div class="market-proof"><img src="images/work_w5_import_0.jpg" alt="海外店铺首屏" data-lightbox="images/work_w5_import_0.jpg"><img src="images/work_w5_import_1.jpg" alt="海外店铺货盘" data-lightbox="images/work_w5_import_1.jpg"></div>
+    </article>
+    <div class="case-spacer"></div>
+
+    <article class="case" id="lace">
+      <div class="case-banner"><b>03</b><span>蕾丝系列设计</span><a href="#work">作品目录 ↑</a></div>
+      <div class="case-cover">
+        <div class="case-cover-copy"><span class="eyebrow">Case 03</span><h2>从情绪方向到<br>产品与页面呈现</h2><p>以轻盈、柔雾、细腻和女性力量为关键词，建立统一的系列视觉与产品语言。</p><small class="case-meta">项目背景：商业蕾丝系列</small><button class="gallery-button" type="button" data-gallery="lace">查看10张作品与设计板</button></div>
+        <div class="lace-visual"><img src="images/work_w3_import_1.jpg" alt="蕾丝材质与产品细节"><img src="images/work_w3_import_0.jpg" alt="蕾丝产品呈现"></div>
+      </div>
+      <h3 class="case-stage">情绪与设计方向 / Mood Board</h3>
+      <div class="collection-board"><img src="assets/lace-moodboard.jpg" alt="蕾丝系列原始情绪板：轻盈、柔雾、细腻与女性力量" data-lightbox="assets/lace-moodboard.jpg" data-lightbox-group="lace-design"></div>
+      <h3 class="case-stage">系列开发 / 结构、材质与细节</h3>
+      <div class="lace-system"><article><span class="eyebrow">01 Structure</span><h3>结构方向</h3><p>薄杯、三角杯、圆胸型与细肩带构成不同穿着表达。</p></article><article><span class="eyebrow">02 Material</span><h3>材质语言</h3><p>蕾丝、丝缎与局部透视形成轻盈但有层次的女性气质。</p></article><article><span class="eyebrow">03 Detail</span><h3>识别细节</h3><p>以贝壳花型、细腻绣线与轻盈边缘，串联不同款式的系列感。</p></article></div>
+      <h3 class="case-stage">系列成果 / 产品与市场</h3>
+      <div class="lace-result"><div class="image-grid"><img src="images/work_w3_import_2.jpg" alt="红色蕾丝系列：贝壳杯型文胸与内裤" data-lightbox="images/work_w3_import_2.jpg" data-lightbox-group="lace-results"><img src="images/work_w3_import_3.jpg" alt="红色蕾丝系列：三角杯型文胸与内裤" data-lightbox="images/work_w3_import_3.jpg" data-lightbox-group="lace-results"></div><div class="result-number"><span>RESULT</span><b>10W+</b><span>系列累计销量</span></div></div>
+      <h3 class="case-stage">系列延展 / 家居服设计</h3>
+      <div class="collection-extension"><div><span class="eyebrow">Loungewear</span><h3>柔和材质<br>延续居家氛围</h3><p>家居服设计围绕吊裙与晨袍展开，以柔和光泽、蕾丝领缘和自然垂感，延续系列细腻、轻盈的视觉语言，关注居家穿着的松弛感与成套搭配。</p></div><button class="homewear-crop" type="button" aria-label="放大查看家居服" data-lightbox="assets/lace-homewear.jpg"><img src="assets/lace-homewear.jpg" alt="浅色家居服的蕾丝领缘与晨袍搭配"></button></div>
+    </article>
+    <div class="case-spacer"></div>
+
+    <article class="case" id="triangle">
+      <div class="case-banner"><b>04</b><span>舒适支撑创新</span><a href="#work">作品目录 ↑</a></div>
+      <div class="case-cover triangle-cover">
+        <div class="case-cover-copy"><span class="eyebrow">Case 04</span><h2>围绕小胸用户的<br>舒适支撑创新</h2><p>以小三角结构与定制锦棉面料，探索小胸用户日常穿着中的舒适、稳定与自然聚拢。</p><small class="case-meta">项目背景：顶瓜瓜产品开发</small><button class="gallery-button" type="button" data-gallery="triangle">查看2张作品</button></div>
+        <div class="case-cover-media" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><img src="images/work_w7_import_0.jpg" alt="小三角文胸系列穿着展示"><img src="images/work_w7_import_1.jpg" alt="小三角文胸浅色款"></div>
+      </div>
+      <h3 class="case-stage">产品思路 / 需求、方案与价值</h3>
+      <div class="triangle-logic"><article><span>01 用户痛点</span><h3>舒适也要稳定</h3><p>小胸用户既需要轻松穿着，也需要更稳定的支撑与自然聚拢。</p></article><article><span>02 产品方案</span><h3>小三角结构</h3><p>开发小三角结构，并将定制锦棉面料用于无痕文胸。</p></article><article><span>03 商业价值</span><h3>形成组合产品</h3><p>形成文胸与配套内裤组合，吸引更年轻的新增用户。</p></article></div>
+    </article>
+
+    <section class="archive">
+      <div class="section-head" id="archive"><div><span class="eyebrow">03 / 作品档案 · Product Archive</span><h2>更多作品</h2></div></div>
+      <div class="archive-grid">
+        <article class="archive-card"><img src="images/work_w2_import_0.jpg" alt="无尺码桑蚕丝系列" data-gallery-open="silk"><div><span class="eyebrow">Material & Product</span><h3>无尺码桑蚕丝系列</h3><p>长丝与短纤结合的材料尝试，延伸至细肩带与睡眠文胸。</p><small>项目背景：商业产品开发</small><button class="gallery-button" type="button" data-gallery="silk">查看9张作品</button></div></article>
+        <article class="archive-card"><img src="images/work_w4_import_0.jpg" alt="功能性产品" data-gallery-open="function"><div><span class="eyebrow">Functional Product</span><h3>内裤与功能性产品</h3><p>日常内裤、哺乳文胸、孕期内裤与塑身等细分品类。</p><small>项目背景：商业产品开发</small><button class="gallery-button" type="button" data-gallery="function">查看10张作品</button></div></article>
+        <article class="archive-card"><img src="images/work_w6_import_0.jpg" alt="自研文胸" data-gallery-open="qise"><div><span class="eyebrow">Independent Development</span><h3>自研已上架款式</h3><p>爆品企划输出、供应商对接与自研文胸开发。</p><small>项目背景：七色纺</small><button class="gallery-button" type="button" data-gallery="qise">查看3张作品</button></div></article>
+        <article class="archive-card"><img src="images/work_w8_import_0.jpg" alt="多品类系列开发" data-gallery-open="aimer"><div><span class="eyebrow">Collection Development</span><h3>多品类系列开发</h3><p>涵盖轻运动文胸、蕾丝文胸与家居服，参与爱慕 CHUANG 第一季及乎兮多季产品开发与制版流程。</p><small>项目背景：爱慕 CHUANG / 乎兮</small><button class="gallery-button" type="button" data-gallery="aimer">查看9张作品</button></div></article>
+      </div>
+      <div class="archive-collages">
+        <article class="collage-card"><img src="assets/archive-aimer.jpg" alt="轻运动内衣系列" data-lightbox="assets/archive-aimer.jpg"><div><h3>轻运动内衣系列</h3><p>轻运动内衣设计</p><small>项目背景：爱慕 CHUANG</small></div></article>
+        <article class="collage-card"><img src="assets/archive-huxi-underwear.jpg" alt="文胸与内裤" data-lightbox="assets/archive-huxi-underwear.jpg"><div><h3>文胸与内裤</h3><p>多品类产品设计</p><small>项目背景：乎兮</small></div></article>
+        <article class="collage-card"><img src="assets/archive-huxi-home.jpg" alt="家居服" data-lightbox="assets/archive-huxi-home.jpg"><div><h3>家居服</h3><p>居家品类设计</p><small>项目背景：乎兮</small></div></article>
+        <article class="collage-card" id="archive-basics"><img src="assets/archive-classic.jpg" alt="经典女裤、日常内裤与袜品" data-gallery-open="basics"><div><h3>经典女裤与袜品</h3><p>经典女裤、日常内裤及袜品的款式与花型设计</p><small>项目背景：顶瓜瓜</small><button class="gallery-button" type="button" data-gallery="basics">查看9张作品</button></div></article>
+        <article class="collage-card"><img src="assets/archive-thermal.jpg" alt="保暖系列" data-lightbox="assets/archive-thermal.jpg"><div><h3>保暖系列</h3><p>系列企划与设计</p><small>项目背景：顶瓜瓜</small></div></article>
+        <article class="collage-card"><img src="assets/archive-pattern.jpg" alt="国风花型" data-lightbox="assets/archive-pattern.jpg"><div><h3>国风花型</h3><p>花型与色彩设计</p><small>项目背景：顶瓜瓜</small></div></article>
+      </div>
+    </section>
+
+    <section class="patents">
+      <div class="patent-inner">
+        <div class="section-head" id="patents"><div><span class="eyebrow">04 / 专利成果 · Patents</span><h2>专利成果</h2></div><p>专利来自实际产品开发，是结构创新、细节设计与产品落地能力的补充证明。</p></div>
+        <div class="patent-summary"><div class="patent-counts"><div><b>3</b><span>实用新型专利</span></div><div><b>8</b><span>外观设计专利</span></div></div></div>
+        <div class="patent-grid">
+          <button type="button" data-lightbox="images/patent_img_p1_import.jpg"><img src="images/patent_img_p1_import.jpg" alt="实用新型专利1"><small>实用新型 01</small></button>
+          <button type="button" data-lightbox="images/patent_img_p2_import.jpg"><img src="images/patent_img_p2_import.jpg" alt="实用新型专利2"><small>实用新型 02</small></button>
+          <button type="button" data-lightbox="images/patent_img_p3_import.jpg"><img src="images/patent_img_p3_import.jpg" alt="实用新型专利3"><small>实用新型 03</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p4_import.jpg"><img src="images/patent_img_p4_import.jpg" alt="外观设计专利1"><small>外观设计 01</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p5_import.jpg"><img src="images/patent_img_p5_import.jpg" alt="外观设计专利2"><small>外观设计 02</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p6_import.jpg"><img src="images/patent_img_p6_import.jpg" alt="外观设计专利3"><small>外观设计 03</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p7_import.jpg"><img src="images/patent_img_p7_import.jpg" alt="外观设计专利4"><small>外观设计 04</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p8_import.jpg"><img src="images/patent_img_p8_import.jpg" alt="外观设计专利5"><small>外观设计 05</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p9_import.jpg"><img src="images/patent_img_p9_import.jpg" alt="外观设计专利6"><small>外观设计 06</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p10_import.jpg"><img src="images/patent_img_p10_import.jpg" alt="外观设计专利7"><small>外观设计 07</small></button>
+          <button type="button" data-lightbox-group="appearance-patents" data-lightbox="images/patent_img_p11_import.jpg"><img src="images/patent_img_p11_import.jpg" alt="外观设计专利8"><small>外观设计 08</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume">
+      <div class="section-head" id="experience"><div><span class="eyebrow">05 / 个人经历 · Experience</span><h2>经历与能力形成</h2></div></div>
+      <div class="resume-layout">
+        <aside class="resume-side"><span class="eyebrow">Design Positioning</span><h3>把审美、穿着与商业目标放在同一条链路中</h3><p>2019至2026年持续深耕内衣产品，经历传统内衣工厂、线下品牌、线上初创公司和头部品牌。</p><div class="capability-list"><span>趋势洞察</span><span>产品企划</span><span>多品类设计</span><span>版型面料</span><span>供应链协同</span><span>项目统筹</span></div>
+          <h3 class="education-heading" id="education">教育背景与获奖</h3>
+          <div class="education-row">
+            <div class="education-card"><span class="eyebrow">Education</span><h3>苏州大学</h3><p>服装与服饰设计 · 本科<br>2015.09—2019.06</p><p>政治面貌：中共党员<br>家乡：江苏常州</p></div>
+            <div class="education-card"><span class="eyebrow">Awards</span><h3>获奖与荣誉</h3><p>2016—2017 苏州大学“学习优秀二等奖”</p><p>2018 苏州大学艺术学院“优秀学生干部”</p><p>“东华杯”第十二届中国大学生服装立裁设计大赛优秀奖</p><p>2018 全国大学生工业设计大赛优秀设计奖</p></div>
+            <div class="education-card"><span class="eyebrow">Certificates</span><h3>专业资质</h3><div class="certificate-list"><span>高中美术教师资格证</span><span>服装制版师四级</span><span>英语四级</span><span>普通话二级甲等</span></div></div>
+          </div>
+        </aside>
+        <div class="timeline" id="career">
+          <article><time>2023.02—2026.08</time><div><h3>内衣设计师 / 产品企划</h3><small>彼悦（北京）科技有限公司 · ubras</small>
+            <dl class="experience-details">
+              <div><dt>多品类设计与落地</dt><dd>负责多季度文胸、内裤及功能性产品开发，跟进企划、款式、面料与样衣调整。</dd></div>
+              <div><dt>海外产品线从0到1</dt><dd>独立搭建海外货盘，协同自研与外采，统筹样品、品质及大货，推动多品类新品上架。</dd></div>
+              <div><dt>十周年秀场与商品化</dt><dd>完成蓝标系列 LOOK 设计，推动明星同款在大秀结束后15天内完成调整、生产与发货。</dd></div>
+              <div><dt>项目统筹与协作</dt><dd>承担任务拆解、供应链协同与进度推进，参与新人带教和项目复盘。</dd></div>
+            </dl>
+          </div></article>
+          <article><time>2022.05—2023.01</time><div><h3>设计经理</h3><small>杭州七珑珠电子商务有限公司 · 七色纺</small><dl class="experience-details">
+            <div><dt>产品企划与协同</dt><dd>负责爆品企划输出与供应商对接，推进产品开发。</dd></div>
+            <div><dt>自研与系列设计</dt><dd>完成自研文胸及23SS小裤系列开发。</dd></div>
+          </dl></div></article>
+          <article><time>2021.01—2022.05</time><div><h3>内衣设计师 / 品类产品经理</h3><small>顶呱呱彩棉服饰有限公司 · 顶瓜瓜</small><dl class="experience-details">
+            <div><dt>文胸企划与开发</dt><dd>负责文胸企划及外采开发，完成小三角系列。</dd></div>
+            <div><dt>多品类设计</dt><dd>参与内裤、保暖衣及花型开发，拓展系列产品表达。</dd></div>
+          </dl></div></article>
+          <article><time>2019.08—2020.12</time><div><h3>内衣设计师助理</h3><small>苏州爱慕内衣有限公司 · 乎兮 / 爱慕</small><dl class="experience-details">
+            <div><dt>品牌系列开发</dt><dd>参与乎兮多季系列与爱慕 CHUANG 第一季产品开发。</dd></div>
+            <div><dt>设计与版型验证</dt><dd>参与产品设计及制版流程，完成版型验证。</dd></div>
+          </dl></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact"><span class="eyebrow">06 / 联系我 · Contact</span><h2>期待与你交流</h2><p>关于设计、产品企划与新的合作机会，欢迎联系。</p><div class="contact-links"><a href="tel:18261985119">182 6198 5119</a><a href="mailto:18261985119@163.com">18261985119@163.com</a></div></section>
+  </main>
+  <footer>崔悦 · 内衣设计与产品企划 · 2019—2026</footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="作品大图">
+    <button class="lightbox-close" type="button" aria-label="关闭">×</button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="上一张">‹</button>
+    <div class="lightbox-frame" id="lightboxFrame"><img id="lightboxImage" alt="放大的作品图片"></div>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="下一张">›</button>
+    <span class="lightbox-count" id="lightboxCount"></span>
+  </div>
+
+  <script>
+    const readingSections = [
+      ['top', '首页'], ['profile', '关于我'], ['work', '代表作品'],
+      ['blue', '代表作品 · 秀场设计'], ['global', '代表作品 · 海外产品线'],
+      ['lace', '代表作品 · 蕾丝系列'], ['triangle', '代表作品 · 结构创新'],
+      ['archive', '更多作品'], ['patents', '专利成果'],
+      ['experience', '经历与教育'], ['contact', '联系我']
+    ].map(function (item) { return { id: item[0], label: item[1], element: document.getElementById(item[0]) }; });
+    const chapterChildren = {
+      work: [['blue', '秀场设计'], ['global', '海外产品线'], ['lace', '蕾丝系列'], ['triangle', '结构创新']],
+      archive: [['archive-silk', '桑蚕丝系列', '.archive-card:nth-child(1)'], ['archive-function', '功能性产品', '.archive-card:nth-child(2)'], ['archive-qise', '自研款式', '.archive-card:nth-child(3)'], ['archive-sport', '多品类系列', '.archive-card:nth-child(4)'], ['archive-collection', '品类与花型', '.archive-collages']],
+    };
+    let chosenChild = '';
+    Object.entries(chapterChildren).forEach(function ([parent, children]) {
+      const parentLink = document.querySelector('.rail-links > a[href="#' + parent + '"]');
+      const group = document.createElement('div');
+      group.className = 'rail-children';
+      group.id = 'rail-children-' + parent;
+      group.hidden = true;
+      parentLink.setAttribute('aria-controls', group.id);
+      parentLink.setAttribute('aria-expanded', 'false');
+      children.forEach(function ([id, label, selector], index) {
+        if (selector) document.querySelector(selector).id = id;
+        const link = document.createElement('a');
+        link.href = '#' + id;
+        link.setAttribute('aria-label', label);
+        const number = document.createElement('span');
+        number.className = 'rail-child-number';
+        number.textContent = String(index + 1).padStart(2, '0');
+        const title = document.createElement('span');
+        title.className = 'rail-child-label';
+        title.textContent = label;
+        link.append(number, title);
+        link.addEventListener('click', function () { chosenChild = id; });
+        group.append(link);
+      });
+      parentLink.after(group);
+    });
+    let readingFrame = false;
+    function updateReadingProgress() {
+      let current = readingSections[0];
+      readingSections.forEach(function (section) {
+        if (section.element.getBoundingClientRect().top <= 160) current = section;
+      });
+      if (scrollY + innerHeight >= document.documentElement.scrollHeight - 2) current = readingSections[readingSections.length - 1];
+      const navId = ['blue', 'global', 'lace', 'triangle'].includes(current.id) ? 'work' : current.id;
+      Object.entries(chapterChildren).forEach(function ([parent, children]) {
+        const group = document.getElementById('rail-children-' + parent);
+        group.hidden = parent !== navId;
+        document.querySelector('.rail-links > a[href="#' + parent + '"]').setAttribute('aria-expanded', String(!group.hidden));
+        let activeChild = '';
+        let closestTop = -Infinity;
+        children.forEach(function ([id]) {
+          const top = document.getElementById(id).getBoundingClientRect().top;
+          if (top <= 165 && (top > closestTop + 2 || (Math.abs(top - closestTop) <= 2 && id === chosenChild))) {
+            activeChild = id;
+            closestTop = top;
+          }
+        });
+        group.querySelectorAll('a').forEach(function (link) {
+          if (!group.hidden && link.getAttribute('href') === '#' + activeChild) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      });
+      const railLinks = Array.from(document.querySelectorAll('.rail-links > a'));
+      const activeRail = railLinks.findIndex(function (link) { return link.getAttribute('href') === '#' + navId; });
+      railLinks.forEach(function (link, index) {
+        link.classList.toggle('is-read', index < activeRail);
+        if (index === activeRail) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+      const distance = document.documentElement.scrollHeight - innerHeight;
+      const fraction = distance > 0 ? Math.max(0, Math.min(1, scrollY / distance)) : 1;
+      document.getElementById('railPercent').textContent = Math.round(fraction * 100);
+      const firstCenter = railLinks[0].offsetTop + railLinks[0].offsetHeight / 2;
+      const lastCenter = railLinks[railLinks.length - 1].offsetTop + railLinks[railLinks.length - 1].offsetHeight / 2;
+      const currentCenter = railLinks[Math.max(0, activeRail)].offsetTop + railLinks[Math.max(0, activeRail)].offsetHeight / 2;
+      document.querySelector('.rail-fill').style.transform = 'scaleY(' + Math.max(0, (currentCenter - firstCenter) / (lastCenter - firstCenter)) + ')';
+      document.querySelectorAll('.desktop-nav a, .mobile-nav a').forEach(function (link) {
+        if (link.getAttribute('href') === '#' + navId) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+      readingFrame = false;
+    }
+    function scheduleReadingProgress() {
+      if (!readingFrame) { readingFrame = true; requestAnimationFrame(updateReadingProgress); }
+    }
+    window.addEventListener('scroll', scheduleReadingProgress, { passive: true });
+    window.addEventListener('resize', scheduleReadingProgress);
+    window.addEventListener('load', scheduleReadingProgress);
+    updateReadingProgress();
+    const menuButton = document.querySelector('.menu-button');
+    const mobileNav = document.getElementById('mobileNav');
+    function closeMenu() {
+      mobileNav.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
+    menuButton.addEventListener('click', function () {
+      const open = mobileNav.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('menu-open', open);
+    });
+    mobileNav.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', closeMenu); });
+
+    const galleries = {
+      blue: Array.from({ length: 15 }, function (_, i) { return 'images/work_w1_import_' + i + '.jpg'; }).concat(['images/work_w3_import_8.jpg']),
+      global: Array.from({ length: 2 }, function (_, i) { return 'images/work_w5_import_' + i + '.jpg'; }),
+      lace: ['assets/lace-moodboard.jpg'].concat(Array.from({ length: 8 }, function (_, i) { return 'images/work_w3_import_' + i + '.jpg'; }), ['assets/lace-homewear.jpg']),
+      triangle: [0, 1].map(function (i) { return 'images/work_w7_import_' + i + '.jpg'; }),
+      basics: ['assets/archive-classic.jpg'].concat([2, 3, 4, 5, 6, 7, 8, 9].map(function (i) { return 'images/work_w7_import_' + i + '.jpg'; })),
+      silk: Array.from({ length: 9 }, function (_, i) { return 'images/work_w2_import_' + i + '.jpg'; }),
+      function: Array.from({ length: 10 }, function (_, i) { return 'images/work_w4_import_' + i + '.jpg'; }),
+      qise: Array.from({ length: 3 }, function (_, i) { return 'images/work_w6_import_' + i + '.jpg'; }),
+      aimer: Array.from({ length: 9 }, function (_, i) { return 'images/work_w8_import_' + i + '.jpg'; })
+    };
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCount = document.getElementById('lightboxCount');
+    let activeImages = [];
+    let activeIndex = 0;
+    let lightboxOpener = null;
+    let swipeStart = null;
+    function showLightboxImage() {
+      lightboxImage.src = activeImages[activeIndex];
+      document.getElementById('lightboxFrame').classList.toggle('lightbox-homewear', activeImages[activeIndex] === 'assets/lace-homewear.jpg');
+      lightboxCount.textContent = (activeIndex + 1) + ' / ' + activeImages.length;
+      document.querySelector('.lightbox-prev').hidden = activeImages.length < 2;
+      document.querySelector('.lightbox-next').hidden = activeImages.length < 2;
+    }
+    function openLightbox(images, startIndex) {
+      lightboxOpener = document.activeElement;
+      activeImages = images;
+      activeIndex = startIndex || 0;
+      showLightboxImage();
+      lightbox.classList.add('is-open');
+      document.body.classList.add('lightbox-open');
+      document.querySelector('.lightbox-close').focus();
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.src = '';
+      if (lightboxOpener && lightboxOpener.focus) lightboxOpener.focus({ preventScroll: true });
+    }
+    function moveLightbox(step) {
+      activeIndex = (activeIndex + step + activeImages.length) % activeImages.length;
+      showLightboxImage();
+    }
+    document.querySelectorAll('[data-gallery]').forEach(function (button) {
+      button.addEventListener('click', function () { openLightbox(galleries[button.dataset.gallery], 0); });
+    });
+    document.querySelectorAll('[data-gallery-open]').forEach(function (image) {
+      image.addEventListener('click', function () { openLightbox(galleries[image.dataset.galleryOpen], 0); });
+    });
+    document.querySelectorAll('[data-lightbox]').forEach(function (item) {
+      item.addEventListener('click', function () {
+        const group = item.dataset.lightboxGroup;
+        const items = group ? Array.from(document.querySelectorAll('[data-lightbox-group]')).filter(function (other) { return other.dataset.lightboxGroup === group; }) : [item];
+        openLightbox(items.map(function (other) { return other.dataset.lightbox; }), items.indexOf(item));
+      });
+    });
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('touchstart', function (event) {
+      swipeStart = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', function (event) {
+      if (!swipeStart || !event.changedTouches.length) return;
+      const dx = event.changedTouches[0].clientX - swipeStart.x;
+      const dy = event.changedTouches[0].clientY - swipeStart.y;
+      swipeStart = null;
+      if (activeImages.length > 1 && Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) moveLightbox(dx < 0 ? 1 : -1);
+    }, { passive: true });
+    lightbox.addEventListener('touchcancel', function () { swipeStart = null; }, { passive: true });
+    document.querySelector('.lightbox-prev').addEventListener('click', function () { moveLightbox(-1); });
+    document.querySelector('.lightbox-next').addEventListener('click', function () { moveLightbox(1); });
+    lightbox.addEventListener('click', function (event) { if (event.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function (event) {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') moveLightbox(-1);
+      if (event.key === 'ArrowRight') moveLightbox(1);
+    });
+  </script>
 </body>
 </html>
