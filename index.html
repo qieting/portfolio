@@ -387,6 +387,13 @@
     @media (hover: hover) and (pointer: fine) { .homewear-crop:hover img { transform: scale(1.025); transform-origin: 27.69% 88.28%; } }
     .homewear-crop img { transition: transform .5s; }
     @media (max-width: 680px) { .collection-extension { grid-template-columns: 1fr; gap: 20px; padding: 20px; } .collection-extension > img { height: auto; max-height: 580px; } .collection-board { padding: 20px; } }
+    /* Suppress browser touch flash without removing keyboard focus indicators. */
+    html { -webkit-tap-highlight-color: transparent; }
+    /* Discourage casual copying; this is not content security or DRM. */
+    body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    img, a { -webkit-touch-callout: none; -webkit-user-drag: none; }
+    :is(a, button, [data-lightbox], [data-gallery-open]):focus:not(:focus-visible) { outline: none; }
+    :is(a, button, [data-lightbox], [data-gallery-open]):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   </style>
 </head>
 <body>
@@ -596,6 +603,10 @@
   </div>
 
   <script>
+    document.querySelectorAll('img, a').forEach(function (item) { item.draggable = false; });
+    document.addEventListener('contextmenu', function (event) { event.preventDefault(); });
+    document.addEventListener('dragstart', function (event) { event.preventDefault(); });
+    document.addEventListener('selectstart', function (event) { event.preventDefault(); });
     const readingSections = [
       ['top', '首页'], ['profile', '关于我'], ['work', '代表作品'],
       ['blue', '代表作品 · 秀场设计'], ['global', '代表作品 · 海外产品线'],
